@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Project Explanation:
 
 The project titled "College Bus Management System" is a web-based application developed using Django, a high-level Python web framework, to manage and streamline the operations related to college transportation services. The system aims to provide an efficient platform for managing buses, drivers, routes, staff, and student enrollments, ensuring smooth and organized transportation management within the college premises.
@@ -41,3 +42,6 @@ Technologies Used:
 
 Conclusion:
 The College Bus Management System is a comprehensive solution designed to enhance the efficiency and effectiveness of transportation management within a college environment. By leveraging Django's robust framework and integrating modern UI/UX practices, the system provides a secure, user-friendly, and scalable platform for managing college transportation services.
+=======
+# Bus_Management_System
+>>>>>>> 1d287a0c91716757ed44c989d4fde082353235d2
