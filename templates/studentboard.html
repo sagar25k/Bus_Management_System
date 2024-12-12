@@ -69,8 +69,6 @@
               <a href="/staff/" class="btn btn-info">View</a>
               <a href="/staff/" class="btn btn-danger">Emergency Call</a>
               <a href="/staff/" class="btn btn-success">Ambulance</a>
-
-
             </div>
           </div>
         </div>
@@ -79,12 +77,17 @@
             <div class="card-body">
               <h5 class="card-title">Online Registrations</h5>
               <p class="card-text">Registrations Process Available Here</p>
-              <a href="#" class="btn btn-success">Bus Registration</a>
+              <!-- Button to navigate to the registration list -->
+              <a href="{% url 'registration_list' %}" class="btn btn-success">Bus Registration</a>
               <a href="#" class="btn btn-warning">Grievance Box</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- Add a button below the cards to navigate to the registration form -->
+      {% comment %} <div class="text-center mt-4">
+        <a href="{% url 'registration_create' %}" class="btn btn-primary">Add a Registration</a>
+      </div> {% endcomment %}
     </div>
 
     {% include 'footer.html' %}

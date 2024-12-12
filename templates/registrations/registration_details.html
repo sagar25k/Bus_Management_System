@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+      .card {
+        margin-top: 20px;
+        border: 1px solid #007bff;
+      }
+      .card-header {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+      .card-body {
+        padding: 20px;
+      }
+      .btn {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include './header.html' %}
+
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header text-center">
+          Registration Details for {{ registration.student_name }}
+        </div>
+        <div class="card-body">
+          <p><strong>Roll Number:</strong> {{ registration.student_rollno }}</p>
+          <p><strong>Parent's Name:</strong> {{ registration.parent_name }}</p>
+          <p><strong>Student Mobile Number:</strong> {{ registration.student_mobileno }}</p>
+          <p><strong>Parent Mobile Number:</strong> {{ registration.parent_mobileno }}</p>
+          <p><strong>Address:</strong> {{ registration.student_address }}</p>
+          <p><strong>Branch:</strong> {{ registration.branch }}</p>
+          <p><strong>Boarding Location:</strong> {{ registration.boarding_location }}</p>
+          <p><strong>Destination:</strong> {{ registration.destination }}</p>
+          <p><strong>Confirmation Status:</strong> {{ registration.confirmation }}</p>
+          <div class="text-center mt-3">
+            <a href="{% url 'registration_update' registration.pk %}" class="btn btn-warning">Edit</a>
+            <a href="{% url 'registration_delete' registration.pk %}" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include './footer.html' %}
+  </body>
+</html>

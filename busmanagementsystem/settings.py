@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'accounts',
     'incharges',
     'staff',
-    'social_django'
+    'social_django',
+    'registrations'
 ]
 
 MIDDLEWARE = [
